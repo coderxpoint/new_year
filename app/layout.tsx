@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,8 @@ export default function RootLayout({
         className={`antialiased bg-gradient-to-r from-slate-800 to-neutral-800 ${inter.className}`}
       >
         {children}
-        <Footer/>
+        <Toaster />
+        <Footer />
       </body>
     </html>
   );

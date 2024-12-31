@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         suppressHydrationWarning
-        className={`antialiased bg-gradient-to-r from-slate-500 to-slate-800 ${inter.className}`}
+        className={`antialiased bg-gradient-to-r from-slate-800 to-neutral-800 ${inter.className}`}
       >
         {children}
         <Footer/>

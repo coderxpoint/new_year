@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Toaster } from "sonner";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`antialiased bg-gradient-to-r from-slate-800 to-neutral-800 ${inter.className}`}
       >
+        <Header />
         {children}
         <Toaster />
         <Footer />

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer() {
   return (
-    <div>
-      
-    </div>
-  )
+    <div className="  w-full mx-auto justify-center items-center flex"></div>
+  );
 }

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col gap-10">
       <HeroSlider />
     </div>
   );

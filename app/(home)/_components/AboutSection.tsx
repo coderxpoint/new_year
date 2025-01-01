@@ -14,7 +14,7 @@ export default function AboutSection() {
           transition={{ duration: 1 }}
           className="flex flex-col gap-4 items-center"
         >
-          <h1 className="lg:text-4xl text-5xl text-white font-extrabold text-center mb-8">
+          <h1 className="lg:text-4xl text-3xl text-white font-extrabold text-center mb-2">
             From <span className="text-blue-500">strategy</span> to{" "}
             <span className="text-green-500">delivery</span>, we are here to
             make sure your business endeavor{" "}
@@ -26,14 +26,14 @@ export default function AboutSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-lg text-gray-400 mb-16 text-center italic"
+            className="text-lg text-gray-400 mb-4 text-center italic"
           >
             Alex Lee, CEO
           </motion.p>
         </motion.div>
       </div>
 
-      <div className=" container h-screen gap-2 flex lg:flex-row flex-col ">
+      <div className=" container px-4 h-screen gap-2 flex lg:flex-row flex-col ">
         <div className="w-full h-full ">
           <Link href="/">
             <div className="relative h-full w-full">
@@ -46,7 +46,7 @@ export default function AboutSection() {
           </Link>
         </div>
         <div className="w-full h-full ">
-          <div className="grid h-full lg:grid-cols-2 grid-cols-1 gap-2">
+          <div className="grid h-full lg:grid-cols-2 grid-cols-2 gap-2">
             <div>
               <Link href="/">
                 <div className="relative h-full w-full">

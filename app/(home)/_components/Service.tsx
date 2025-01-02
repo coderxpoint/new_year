@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Star } from "lucide-react";
 
 export default function ServicesSection() {
   return (
@@ -27,7 +26,7 @@ export default function ServicesSection() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/careers.avif')" }}
           >
-            <div className="absolute inset-0 bg-[#1a2238] opacity-70"></div>
+            <div className="absolute inset-0 bg-[#1a2238] opacity-90"></div>
           </div>
 
           {/* Content Section */}
@@ -38,7 +37,11 @@ export default function ServicesSection() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
               Learn Strategy Planning With Us
             </h2>
-            <Button variant="default">VIEW MORE</Button>
+            <button className="">
+              <a href="#" className="a">
+                <span className="">View More</span>
+              </a>
+            </button>
           </div>
 
           {/* Decorative Star */}
@@ -71,7 +74,7 @@ export default function ServicesSection() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/careers.avif')" }}
           >
-            <div className="absolute inset-0 bg-[#1a2238] opacity-70"></div>
+            <div className="absolute inset-0 bg-[#1a2238] opacity-90"></div>
           </div>
 
           {/* Content Section */}
@@ -82,7 +85,11 @@ export default function ServicesSection() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
               Learn Strategy Planning With Us
             </h2>
-            <Button variant="default">VIEW MORE</Button>
+            <button>
+              <a href="#" className="a">
+                <span>View More</span>
+              </a>
+            </button>
           </div>
 
           {/* Decorative Star */}

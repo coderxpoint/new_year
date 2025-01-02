@@ -14,7 +14,7 @@ export default function AboutSection() {
           className="flex flex-col h-[80vh] justify-center mx-auto
            gap-4 items-center"
         >
-          <h1 className="lg:text-6xl text-5xl text-black font-semibold italic text-center mb-4">
+          <h1 className="lg:text-6xl text-5xl text-black font-semibold text-center mb-4">
             From strategy to delivery, we are here to make sure your business
             endeavor succeed. Trust our experts.
           </h1>

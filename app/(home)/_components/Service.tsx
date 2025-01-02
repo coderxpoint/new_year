@@ -4,12 +4,9 @@ import { Button } from "@/components/ui/button";
 export default function ServicesSection() {
   return (
     <div className="flex flex-col gap-0">
-      <div
-        className="grid  md:grid-cols-3 min-h-[600px]"
-        style={{ gridTemplateColumns: "2fr 1fr" }}
-      >
+      <div className="grid lg:grid-cols-2 min-h-[600px] md:grid-cols-1">
         {/* Left Image Section */}
-        <div className="relative w-full h-full min-h-[400px]">
+        <div className="relative w-full h-full min-h-[400px] md:order-1 order-2">
           <Image
             src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1920"
             alt="Professional working at desk"
@@ -20,7 +17,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Right Content Section */}
-        <div className="relative flex flex-col justify-end bg-[#1a2238] text-white p-8 md:p-12 lg:p-16">
+        <div className="relative flex flex-col justify-end bg-[#1a2238] text-white p-8 md:p-12 lg:p-16 md:order-2 order-1">
           {/* Background Image with Overlay */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -61,14 +58,10 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      {/* alternative service */}
-
-      <div
-        className="grid md:grid-cols-3 min-h-[600px]"
-        style={{ gridTemplateColumns: "1fr 2fr" }}
-      >
-        {/* Left Content Section */}
-        <div className="order-2 md:order-1 relative flex flex-col justify-end bg-[#1a2238] text-white p-8 md:p-12 lg:p-16">
+      {/* Alternative Service */}
+      <div className="grid lg:grid-cols-2 min-h-[600px] md:grid-cols-1">
+        {/* Right Content Section */}
+        <div className="relative flex flex-col justify-end bg-[#1a2238] text-white p-8 md:p-12 lg:p-16 md:order-2 order-1">
           {/* Background Image with Overlay */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -108,8 +101,8 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        {/* Left Image Section */}
-        <div className="order-1 md:order-2 relative w-full h-full min-h-[400px]">
+        {/* Right Image Section */}
+        <div className="relative w-full h-full min-h-[400px] md:order-2 order-1">
           <Image
             src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1920"
             alt="Professional working at desk"

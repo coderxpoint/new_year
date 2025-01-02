@@ -43,17 +43,16 @@ export default function Header() {
         )}
       </AnimatePresence>
 
-      <header className="sticky top-0 z-50 bg-gray-900 w-full mx-auto py-2 flex lg:flex-col flex-row items-center justify-between">
+      <header className="sticky top-0 z-50 bg-white  w-full mx-auto py-2 flex lg:flex-col flex-row items-center justify-between">
         <Topbar />
         <MobileHeader />
-        <div className="lg:hidden block">shrey</div>
         <div className="lg:flex container hidden px-4 flex-row justify-start gap-10 items-center w-full">
           <Image
             src="https://www.coderxpoint.com/static/media/cxpoint_142.047d69ad3394fb2b0e4b413c52ae93b7.svg"
             alt="logo"
             width={100}
             height={100}
-            className="object-contain"
+            className="object-contain bg-black"
           />
           <nav className="ml-10">
             <NavigationMenu
@@ -128,7 +127,7 @@ export default function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Cards</NavigationMenuTrigger>{" "}
-                  <NavigationMenuContent className="bg-gray-100">
+                  <NavigationMenuContent className="bg-gray-100 ">
                     <ul className="flex w-[80vw] justify-between flex-row h-full gap-4 p-4 bg-white rounded-lg shadow-lg">
                       {cards.map((category, catIndex) => (
                         <li key={catIndex} className="flex flex-col">

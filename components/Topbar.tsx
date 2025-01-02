@@ -30,7 +30,7 @@ const topbarItems: TopbarItem[] = [
 
 export default function Topbar() {
   return (
-    <div className="w-full hidden lg:block  text-white">
+    <div className="w-full hidden lg:block  text-black">
       <div className="container mx-auto px-4 mb-4 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           {topbarItems.map((item, index) => (

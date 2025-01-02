@@ -13,14 +13,12 @@ export default function AboutSection() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="flex flex-col gap-4 items-center"
+          className="flex flex-col h-[80vh] justify-center mx-auto
+           gap-4 items-center"
         >
-          <h1 className="lg:text-4xl text-5xl text-white font-extrabold text-center mb-4">
-            From <span className="text-blue-500">strategy</span> to{" "}
-            <span className="text-green-500">delivery</span>, we are here to
-            make sure your business endeavor{" "}
-            <span className="text-yellow-500">succeeds</span>. Trust our{" "}
-            <span className="text-red-500">experts</span>.
+          <h1 className="lg:text-6xl text-5xl text-black font-semibold italic text-center mb-4">
+            From strategy to delivery, we are here to make sure your business
+            endeavor succeed. Trust our experts.
           </h1>
           <Separator className="" />
           <motion.p
@@ -33,8 +31,6 @@ export default function AboutSection() {
           </motion.p>
         </motion.div>
       </div>
-
-      <BusinessGrid />
     </section>
   );
 }

@@ -2,8 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
-import BusinessGrid from "./BusinessCard";
 
 export default function AboutSection() {
   return (

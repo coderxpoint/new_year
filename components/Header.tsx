@@ -107,7 +107,7 @@ export default function Header() {
                           />
                         </div>
                       </ul>
-                      <ul className="flex flex-row justify-start items-center gap-2 p-4 bg-gray-100">
+                      <ul className="flex flex-row justify-start items-center  gap-2 p-4 ">
                         <span className="font-semibold text-gray-700">
                           Quick Links:
                         </span>

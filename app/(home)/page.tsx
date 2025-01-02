@@ -4,6 +4,7 @@ import AboutSection from "./_components/AboutSection";
 import DailyNews from "./_components/DailyNews";
 import BusinessGrid from "./_components/BusinessCard";
 import CareersHome from "./_components/CareersHome";
+import ServicesSection from "./_components/Service";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <BusinessGrid/>
       <DailyNews />
       <CareersHome/>
+      <ServicesSection/>
     </div>
   );
 }

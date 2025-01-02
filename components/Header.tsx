@@ -23,11 +23,11 @@ import MobileHeader from "./MobileHeader";
 
 export default function Header() {
   return (
-    <header className="bg-gray-900 w-full mx-auto px-4 py-6 flex lg:flex-col  flex-row items-center justify-between">
+    <header className=" sticky top-0 z-50 bg-gray-900 w-full mx-auto  py-2 flex lg:flex-col  flex-row items-center justify-between">
       <Topbar />
       <MobileHeader />
       <div className="lg:hidden block">shrey</div>
-      <div className="lg:flex container hidden flex-row justify-start gap-10 items-center w-full">
+      <div className="lg:flex container hidden px-4 flex-row justify-start gap-10 items-center w-full">
         <Image
           src="https://www.coderxpoint.com/static/media/cxpoint_142.047d69ad3394fb2b0e4b413c52ae93b7.svg"
           alt="logo"

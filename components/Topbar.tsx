@@ -76,7 +76,7 @@ const reactUs: TopbarItem[] = [
 export default function Topbar() {
   return (
     <div className="w-full hidden lg:block  text-black">
-      <div className="container mx-auto px-4 mb-4 flex justify-between items-center">
+      <div className="container mx-auto mb-4 flex justify-between items-center">
         <div className="flex items-center  space-x-2">
           {topbarItems.map((item, index) => (
             <Link
@@ -92,7 +92,7 @@ export default function Topbar() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="outline">
+                <Button variant="outline" className="border- border-red-700">
                   <Phone size={24} className="text-red-700" />
                 </Button>
               </TooltipTrigger>

@@ -65,189 +65,64 @@ export default function Header() {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="relative  z-50">
-                      <ul className="flex w-[80vw]  justify-between flex-row h-full gap-4 p-4 bg-white rounded-lg shadow-lg">
-                        {accountsAndDepositsMenu.map((category, catIndex) => (
-                          <li key={catIndex} className="flex flex-col">
-                            {category.title && (
-                              <>
-                                <span className="font-bold mb-2">
-                                  {category.title}
-                                </span>
-                                <Separator className="my-2" />
-                              </>
-                            )}
-                            {category.items?.map((item, itemIndex) => (
-                              <Link
-                                key={itemIndex}
-                                href={item.href}
-                                className="hover:text-blue-500 mb-1"
-                              >
-                                {item.label}
-                              </Link>
-                            ))}
-                            {category.imageUrl && (
-                              <div className="flex justify-center h-full w-full items-center">
-                                <Image
-                                  src={category.imageUrl}
-                                  alt={category.imageAlt || "image-alt"}
-                                  width={100}
-                                  height={100}
-                                  className="object-contain w-auto mx-auto"
-                                />
-                              </div>
-                            )}
-                          </li>
-                        ))}
-                        <div>
-                          <img
-                            src="/ads.webp"
-                            alt=""
-                            className="w-full h-[40vh]"
-                          />
-                        </div>
-                      </ul>
-                      <ul className="flex flex-row justify-start items-center  gap-2 p-4 ">
-                        <span className="font-semibold text-gray-700">
-                          Quick Links:
-                        </span>
-                        {quickLinks.map((link, index) => (
-                          <li key={index}>
-                            <Link
-                              href={link.href}
-                              className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
+                      <div className="flex flex-col w-full">
+                        <ul className="flex w-[80vw]  justify-between flex-row h-full gap-4 p-4 bg-white rounded-lg shadow-lg">
+                          {accountsAndDepositsMenu.map((category, catIndex) => (
+                            <div key={catIndex} className="flex gap-12 ">
+                              <li className="flex flex-col">
+                                {category.title && (
+                                  <>
+                                    <span className="font-bold mb-2">
+                                      {category.title}
+                                    </span>
+                                    <Separator className="my-2" />
+                                  </>
+                                )}
+                                {category.items?.map((item, itemIndex) => (
+                                  <Link
+                                    key={itemIndex}
+                                    href={item.href}
+                                    className="hover:text-red-700 mb-1"
+                                  >
+                                    {item.label}
+                                  </Link>
+                                ))}
+                              </li>
+                              <Separator
+                                className=" h-[30vh] items-center"
+                                orientation="vertical"
+                              />
+                            </div>
+                          ))}
+                          <div>
+                            <img
+                              src="/ads.webp"
+                              alt=""
+                              className="w-full h-[40vh]"
+                            />
+                          </div>
+                        </ul>
+                        <ul className="flex flex-row justify-start items-center  gap-2 p-4 ">
+                          <span className="font-semibold text-gray-700">
+                            Quick Links:
+                          </span>
+                          {quickLinks.map((link, index) => (
+                            <li
+                              key={index}
+                              className="border border-black px-2 rounded-lg items-center justify-center"
                             >
-                              {link.label}
-                              <Separator className="bg-black" />
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+                              <Link
+                                href={link.href}
+                                className="text-gray-600 hover:text-red-700 text-sm transition-colors"
+                              >
+                                {link.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Cards</NavigationMenuTrigger>{" "}
-                  <NavigationMenuContent className="bg-gray-100 ">
-                    <ul className="flex w-[80vw] justify-between flex-row h-full gap-4 p-4 bg-white rounded-lg shadow-lg">
-                      {cards.map((category, catIndex) => (
-                        <li key={catIndex} className="flex flex-col">
-                          {category.title && (
-                            <>
-                              <span className="font-bold mb-2">
-                                {category.title}{" "}
-                              </span>{" "}
-                              <Separator className="my-2" />{" "}
-                            </>
-                          )}{" "}
-                          {category.items &&
-                            category.items.map((item, itemIndex) => (
-                              <Link
-                                key={itemIndex}
-                                href={item.href}
-                                className="hover:text-blue-500 mb-1"
-                              >
-                                {item.label}{" "}
-                              </Link>
-                            ))}{" "}
-                          {category.imageUrl && (
-                            <div className="flex justify-center h-full w-full items-center">
-                              <Image
-                                src={category.imageUrl}
-                                alt={category.imageAlt || "image-alt"}
-                                width={100}
-                                height={100}
-                                className="object-contain w-auto mx-auto"
-                              />{" "}
-                            </div>
-                          )}{" "}
-                        </li>
-                      ))}{" "}
-                      <div>
-                        <img
-                          src="/ads.webp"
-                          alt=""
-                          className="w-full h-[40vh]"
-                        />{" "}
-                      </div>{" "}
-                    </ul>{" "}
-                    <ul className="flex flex-row justify-start items-center gap-2 p-4">
-                      <span className="font-semibold text-gray-700">
-                        Quick Links:{" "}
-                      </span>{" "}
-                      {quickLinksCards.map((link, index) => (
-                        <li key={index}>
-                          <Link
-                            href={link.href}
-                            className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
-                          >
-                            {link.label} <Separator className="bg-black" />{" "}
-                          </Link>{" "}
-                        </li>
-                      ))}{" "}
-                    </ul>{" "}
-                  </NavigationMenuContent>{" "}
-                </NavigationMenuItem>{" "}
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>cards22</NavigationMenuTrigger>{" "}
-                  <NavigationMenuContent className="bg-gray-100">
-                    <ul className="flex w-[80vw] justify-between flex-row h-full gap-4 p-4 bg-white rounded-lg shadow-lg">
-                      {cards2.map((category, catIndex) => (
-                        <li key={catIndex} className="flex flex-col">
-                          {category.title && (
-                            <>
-                              <span className="font-bold mb-2">
-                                {category.title}{" "}
-                              </span>{" "}
-                              <Separator className="my-2" />{" "}
-                            </>
-                          )}{" "}
-                          {category.items &&
-                            category.items.map((item, itemIndex) => (
-                              <Link
-                                key={itemIndex}
-                                href={item.href}
-                                className="hover:text-blue-500 mb-1"
-                              >
-                                {item.label}{" "}
-                              </Link>
-                            ))}{" "}
-                          {category.imageUrl && (
-                            <div className="flex justify-center h-full w-full items-center">
-                              <Image
-                                src={category.imageUrl}
-                                alt={category.imageAlt || "image-alt"}
-                                width={100}
-                                height={100}
-                                className="object-contain w-auto mx-auto"
-                              />{" "}
-                            </div>
-                          )}{" "}
-                        </li>
-                      ))}{" "}
-                      <div>
-                        <img
-                          src="/ads.webp"
-                          alt=""
-                          className="w-full h-[40vh]"
-                        />{" "}
-                      </div>{" "}
-                    </ul>{" "}
-                    <ul className="flex flex-row justify-start items-center gap-2 p-4">
-                      <span className="font-semibold text-gray-700">
-                        Quick Links:{" "}
-                      </span>{" "}
-                      {quickLinksCards2.map((link, index) => (
-                        <li key={index}>
-                          <Link
-                            href={link.href}
-                            className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
-                          >
-                            {link.label} <Separator className="bg-black" />{" "}
-                          </Link>{" "}
-                        </li>
-                      ))}{" "}
-                    </ul>{" "}
-                  </NavigationMenuContent>{" "}
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>

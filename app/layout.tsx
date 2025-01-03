@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import { Toaster } from "sonner";
 import Header from "@/components/Header";
+import { HeaderV2 } from "@/components/HeaderV2";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
@@ -33,7 +34,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`antialiased bg-pink-50 ${playfair.className}`}
       >
-        <Header />
+        {/* <Header /> */}
+        <HeaderV2 />
         {children}
         <Toaster />
         <Footer />

@@ -15,10 +15,10 @@ import Image from "next/image";
 export default function MobileHeader() {
   return (
     <div>
-      <div className="flex items-center gap-4 lg:hidden">
+      <div className="flex px-4 items-center gap-4 lg:hidden">
         <Sheet>
           <SheetTrigger>
-            <Menu className="h-6 w-6 text-white" />
+            <Menu className="h-6 w-6 text-black" />
           </SheetTrigger>
           <SheetContent
             side="left"
@@ -122,7 +122,7 @@ export default function MobileHeader() {
           alt="logo"
           width={100}
           height={100}
-          className="object-contain"
+          className="object-contain bg-black"
         />
       </div>
     </div>

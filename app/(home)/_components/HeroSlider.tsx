@@ -70,7 +70,7 @@ const HeroSlider = () => {
   const prevSlide = () => paginate(-1);
 
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden">
+    <div className="relative lg:h-[90vh] h-[50vh] w-full overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}

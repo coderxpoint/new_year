@@ -1,34 +1,34 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 interface MegaMenuItem {
-  title: string
-  href: string
-  badge?: string
+  title: string;
+  href: string;
+  badge?: string;
 }
 
 interface MegaMenuSection {
-  title: string
-  items: MegaMenuItem[]
+  title: string;
+  items: MegaMenuItem[];
 }
 
 interface QuickLink {
-  title: string
-  href: string
+  title: string;
+  href: string;
 }
 
 interface PromoContent {
-  title: string
-  description: string
-  cta: string
-  image: string
+  title: string;
+  description: string;
+  cta: string;
+  image: string;
 }
 
 interface MegaMenuProps {
-  content: MegaMenuSection[]
-  quickLinks: QuickLink[]
-  promo: PromoContent
+  content: MegaMenuSection[];
+  quickLinks: QuickLink[];
+  promo: PromoContent;
 }
 
 export function MegaMenu({ content, quickLinks, promo }: MegaMenuProps) {
@@ -38,7 +38,9 @@ export function MegaMenu({ content, quickLinks, promo }: MegaMenuProps) {
         {content.map((section, index) => (
           <div key={index} className="space-y-6">
             <div>
-              <h3 className="mb-4 text-sm font-medium text-gray-500">{section.title}</h3>
+              <h3 className="mb-4 text-sm font-medium text-gray-500">
+                {section.title}
+              </h3>
               <ul className="space-y-3">
                 {section.items.map((item, itemIndex) => (
                   <li key={itemIndex}>
@@ -56,20 +58,18 @@ export function MegaMenu({ content, quickLinks, promo }: MegaMenuProps) {
             </div>
           </div>
         ))}
-        <div className="relative overflow-hidden rounded-lg bg-red-800">
+        <div className="relative w-full overflow-hidden rounded-lg bg-red-800">
           <div className="relative z-10 p-6 text-white">
-            <h3 className="mb-4 text-2xl font-bold">
-              {promo.title}
-            </h3>
+            <h3 className="mb-4 text-2xl font-bold">{promo.title}</h3>
             <p className="mb-6">{promo.description}</p>
-            <Link 
-              href="#" 
+            <Link
+              href="#"
               className="inline-block rounded-md bg-white px-4 py-2 text-sm font-medium text-red-800 hover:bg-gray-100"
             >
               {promo.cta}
             </Link>
           </div>
-          <div className="absolute right-0 top-0 h-full w-1/2">
+          <div className="absolute right-0 top-0 h-full ">
             <Image
               src={promo.image}
               alt="Promotional image"
@@ -91,6 +91,5 @@ export function MegaMenu({ content, quickLinks, promo }: MegaMenuProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

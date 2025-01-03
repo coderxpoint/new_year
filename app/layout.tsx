@@ -34,7 +34,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`antialiased bg-pink-50 ${playfair.className}`}
       >
-        {/* <Header /> */}
+        <Header />
         <HeaderV2 />
         {children}
         <Toaster />

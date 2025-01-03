@@ -43,7 +43,7 @@ export default function Header() {
         )}
       </AnimatePresence>
 
-      <header className="sticky top-0 z-50 bg-white  w-full mx-auto py-2 flex lg:flex-col flex-row items-center justify-between">
+      <header className="sticky lg:hidden block top-0 z-50 bg-white  w-full mx-auto py-2 flex lg:flex-col flex-row items-center justify-between">
         <Topbar />
         <MobileHeader />
         <div className="lg:flex container hidden px-4 flex-row justify-start gap-10 items-center w-full">

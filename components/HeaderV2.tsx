@@ -248,7 +248,7 @@ export function HeaderV2() {
   ];
 
   return (
-    <header className="relative z-50 py-2  bg-white shadow-sm">
+    <header className="relative hidden lg:block z-50 py-2  bg-white shadow-sm">
       <Topbar />
       <div className="container mx-auto px-4">
         <div className="flex h-auto items-center justify-between">

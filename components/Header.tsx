@@ -37,7 +37,7 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 bg-black/80 z-40"
             aria-hidden="true"
           />
         )}
@@ -54,7 +54,7 @@ export default function Header() {
             height={100}
             className="object-contain bg-black"
           />
-          <nav className="ml-10">
+          <nav className="ml-10 ">
             <NavigationMenu
               onValueChange={(value) => setIsAnyMenuOpen(value !== "")}
             >
@@ -64,8 +64,8 @@ export default function Header() {
                     Accounts & Deposits
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="relative z-50">
-                      <ul className="flex w-[80vw] justify-between flex-row h-full gap-4 p-4 bg-white rounded-lg shadow-lg">
+                    <div className="relative  z-50">
+                      <ul className="flex w-[80vw]  justify-between flex-row h-full gap-4 p-4 bg-white rounded-lg shadow-lg">
                         {accountsAndDepositsMenu.map((category, catIndex) => (
                           <li key={catIndex} className="flex flex-col">
                             {category.title && (

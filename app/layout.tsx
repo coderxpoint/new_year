@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Teachers } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Toaster } from "sonner";
 import Header from "@/components/Header";
 import { HeaderV2 } from "@/components/HeaderV2";
 
-const playfair = Playfair_Display({ subsets: ["latin"] });
+const playfair = Teachers({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",

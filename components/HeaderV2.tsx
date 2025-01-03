@@ -12,9 +12,9 @@ export function HeaderV2() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   return (
-    <header className="relative hidden lg:block z-50 py-2  bg-white shadow-sm">
+    <header className="top-0 hidden lg:block sticky z-50 py-2  bg-white shadow-sm">
       <Topbar />
-      <div className="container mx-auto px-4">
+      <div className="container  mx-auto px-4">
         <div className="flex h-auto items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
